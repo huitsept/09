@@ -8,14 +8,16 @@ int main(int argc, char *argv[]) {
 	int sum;
 	int grade[SIZE];
 	
-	printf("input %i scores\n", SIZE);
-	
-	for (i=0;i<SIZE;i++)
+	sum = 0;
+	for(i=0; i<SIZE ; i++)
+	{
+		printf("학생 성적을 입력하세요 :");
 		scanf("%d", &grade[i]);
-		
-	for (i=0;i<SIZE;i++)
-		printf("grade[%d]= %d\n",i, grade[i]);
-		
+		sum+= grade[i];
+	}
+	average = sum / SIZE;
+	printf("성적 평균 : %d\n", average);
+	
 	
 	return 0;
 }
